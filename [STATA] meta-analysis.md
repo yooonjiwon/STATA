@@ -21,13 +21,15 @@ The data is from the paper about aspirin and breast cancer (Ting Lue et al, 2012
 metan OR LCI UCI
 ```
 
-[##_Image|kage@dVrwWg/btrxfvUxos0/V9XSeR6S4dSaWtrim872U0/img.png|CDM|1.3|{"originWidth":469,"originHeight":702,"style":"alignCenter"}_##]
+![image](https://user-images.githubusercontent.com/41531140/186229834-d16a8930-5782-4754-94cf-d4e3c209ecfa.png)
+
 
 ```stata
 metan OR LCI UCI, random label(namevar=Study)
 ```
 
-[##_Image|kage@bZFhfv/btrxgoOpIiF/z7HyDnW5z3K2QdK8pWXc51/img.png|CDM|1.3|{"originWidth":570,"originHeight":707,"style":"alignCenter"}_##]
+![image](https://user-images.githubusercontent.com/41531140/186229866-6fac065f-f7bb-41a4-8fea-800f3a6f6274.png)
+
 
 ```stata
 metan OR LCI UCI, random label(namevar=Study) sortby(Study)
@@ -49,16 +51,16 @@ We can make the funnel plot
 ```stata
 metafunnel logor selogor
 ```
+![image](https://user-images.githubusercontent.com/41531140/186229923-8a54c6f3-bfa8-448a-b425-c4b1b65961fe.png)
 
-[##_Image|kage@Jylw4/btrw6WfjtmG/m4TjcMyEJOE10dIJOhTD4k/img.png|CDM|1.3|{"originWidth":695,"originHeight":504,"style":"alignCenter","width":530,"height":384}_##]
 
 We can get publication bias like below.
 
 ```stata
 metabias logor selogor, egger
 ```
+![image](https://user-images.githubusercontent.com/41531140/186229946-82cd34f4-341b-46aa-8a9f-8290ae93e2ad.png)
 
-[##_Image|kage@cMfYoC/btrw6VAHvhI/MJfIPbWT2WgiBzlaZEcjW1/img.png|CDM|1.3|{"originWidth":575,"originHeight":250,"style":"alignCenter"}_##]
 
 ## **HR**
 
@@ -70,8 +72,8 @@ After you import your HR data (I have variable **Author, Year, HR, LHR, UHR**),
 metan HR LHR UHR, random label(namevar=Author)
 metan HR LHR UHR, random label(namevar=Author) sortby(Author)
 ```
+![image](https://user-images.githubusercontent.com/41531140/186229975-4f447a31-568f-4425-873c-aad3cc1a80c8.png)
 
-[##_Image|kage@zgSyR/btrxdPTwfpn/kZZ1Mm4ifUDKwL93nS13uK/img.png|CDM|1.3|{"originWidth":672,"originHeight":390,"style":"alignCenter"}_##]
 
 For funnel plot and publication bias,
 
@@ -94,8 +96,8 @@ After you get your sensitivity and specificity data, you can get forest plots of
 ```stata
 midas tp fp fn tn, bfor(dss) id(Author Year) ford fors
 ```
+![image](https://user-images.githubusercontent.com/41531140/186230006-2655e5e0-0b5a-4133-897d-c399b59de4d2.png)
 
-[##_Image|kage@bgwHeY/btrxb9ZvIjm/W4W4LwlrKnyw15tPNvFue1/img.png|CDM|1.3|{"originWidth":652,"originHeight":493,"style":"alignCenter"}_##]
 
 You also can get funnel plot
 
