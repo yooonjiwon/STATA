@@ -1,7 +1,7 @@
 # Data Import
 Importing dataset in STATA is pretty simple.   
 **[File]-[Import]** is the simplest method to import excel, txt, SPSS, or SAS into STATA.  
-\\
+<br />
 If it is STATA dta file type, then use  
 **[File]-[Open]**  
 
